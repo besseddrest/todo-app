@@ -1,0 +1,23 @@
+/* common button styles (not tied to todo-list) */
+.button {
+  margin-right: 10px;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  background: transparent;
+  border: 2px solid $cool;
+  color: darken($cool, 3%);
+  background: lighten($cool, 30%);
+  outline: none;
+  transition: all .25s;
+
+  &:hover {
+    border-color: darken($cool, 5%);
+    color: darken($cool, 8%);
+  }
+
+  &:active {
+    border-color: darken($cool, 10%);
+    color: darken($cool, 13%);
+  }
+}

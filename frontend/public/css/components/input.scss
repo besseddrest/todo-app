@@ -1,0 +1,8 @@
+/* common input styles */
+input {
+  background: transparent;
+
+  &:focus {
+    outline: none;
+  }
+}

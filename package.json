@@ -1,0 +1,22 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "A simple ToDo application written in vanilla Javascript and Sass.",
+  "scripts": {
+    "start": "./node_modules/nodemon/bin/nodemon.js ./frontend/app.js",
+    "build": "babel frontend/public/js -d build/js"
+  },
+  "author": "Harold Cabalic",
+  "license": "ISC",
+  "dependencies": {
+    "babel-standalone": "^6.18.2",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "font-awesome": "^4.7.0",
+    "node-sass-middleware": "^0.9.8",
+    "nodemon": "^1.11.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0"
+  }
+}

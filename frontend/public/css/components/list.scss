@@ -1,0 +1,117 @@
+/*
+ * BEM CSS Methodology
+ * http://getbem.com/introduction/
+ *
+ * A todo-list is a single component; if we wanted to include this component
+ * in other applications, everything is nicely packaged in this single scss file,
+ * instead of cherry-picking the code out of other various input, button,
+ * typography, etc. files
+ *
+ */
+
+/* ToDo list general */
+.todo-list {
+  position: relative;
+  flex-basis: 300px;
+  min-height: 300px;
+  margin: 0 20px 20px 0;
+  padding: 15px 15px 50px 15px;
+  background: #FFFF66;
+  border: 1px solid $warm;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+
+  &__clean {
+    & .todo-list--item__done {
+      opacity: 0;
+      padding: 0;
+      height: 0;
+    }
+  }
+
+  /* ToDo list title */
+  &--title {
+    border: 0;
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  /* list item wrapper */
+  &--item {
+    display: block;
+    padding: 8px 0;
+    border-bottom:1px solid lightblue;
+    opacity: 1;
+    transition: all .5s;
+
+    &:hover {
+      & .todo-list--button__remove {
+        visibility: visible;
+      }
+    }
+
+    &__invalid {
+      border-bottom-color: $danger;
+    }
+  }
+
+  /* list item buttons */
+  &--button {
+    color: $warm;
+    border: 0;
+    outline: none;
+    transition:
+      all .25s;
+
+    &:hover {
+      color: lighten($warm, 7%);
+    }
+
+    &__add {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: transparent;
+
+      &:hover {
+        transform: scale(1.3);
+      }
+    }
+
+    &__remove {
+      visibility: hidden;
+      background: transparent;
+
+      &:hover {
+        transform: scale(1.3);
+      }
+    }
+
+    &__toggle {
+      position:absolute;
+      bottom: 15px;
+      left: 15px;
+      font-size: 14px;
+    }
+
+    &__delete {
+      position:absolute;
+      bottom: 15px;
+      right: 15px;
+      font-size: 14px;
+    }
+  }
+
+  /* list item input fields */
+  &--input {
+    &-text {
+      margin-left: 5px;
+      border: 0;
+      font-size: 14px;
+      width: 85%;
+
+      &__done {
+        text-decoration: line-through;
+      }
+    }
+  }
+}
