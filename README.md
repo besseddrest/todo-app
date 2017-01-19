@@ -5,7 +5,7 @@ A simple "ToDo" application created with Javascript and SASS/SCSS. Data is store
 
 ## Getting Started
 
-To run this code, first make sure you have Node installed. [Download and install NodeJS here (https://nodejs.org/download/)
+To run this code, first make sure you have Node installed. [Download and install NodeJS here](https://nodejs.org/download/)
 
 Clone this repo
 ```
